@@ -49,7 +49,7 @@
 		<hr>
 
 		<h3><strong>Question 1</strong></h3>
-		<h4>You prefer to hangout with your signifcant other and no one else.</h4>
+		<h4>You prefer to hangout with your signifcant other.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q1">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -84,7 +84,7 @@
 
 
 		<h3><strong>Question 4</strong></h3>
-		<h4>You rarely do something just out of sheer curiosity.</h4>
+		<h4>You prefer intimate gatherings.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q4">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -96,7 +96,7 @@
 
 
 		<h3><strong>Question 5</strong></h3>
-		<h4>You love going out on the town to try new things.</h4>
+		<h4>You love going on adventures.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q5">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -120,7 +120,7 @@
 
 
 		<h3><strong>Question 7</strong></h3>
-		<h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+		<h4>You are a dog person.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q7">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -131,7 +131,7 @@
       	</select>
 
 		<h3><strong>Question 8</strong></h3>
-		<h4>You rarely get carried away by fantasies and ideas.</h4>
+		<h4>You like to spend your Friday night with a good book.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q8">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -142,7 +142,7 @@
       	</select>
 
 		<h3><strong>Question 9</strong></h3>
-		<h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+		<h4>You like outdoor activities.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q9">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -153,7 +153,7 @@
       	</select>
 
 		<h3><strong>Question 10</strong></h3>
-		<h4>You feel more energetic after spending time with a group of people.</h4>
+		<h4>You would describe yourself as extrovert.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q10">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -184,7 +184,7 @@
 	      </div>
 	      <div class="modal-body">
 	        <h2 id="matchName"></h2>
-	        <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+	        <img id="matchImg" src="" alt="">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -201,7 +201,7 @@
       '.chosen-select'           : {},
       '.chosen-select-deselect'  : {allow_single_deselect:true},
       '.chosen-select-no-single' : {disable_search_threshold:10},
-      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-no-results': {no_results_text:'nothing found'},
       '.chosen-select-width'     : {width:"95%"}
     }
     for (var selector in config) {
@@ -255,7 +255,7 @@
 		}
 		else
 		{
-			alert("Please fill out all fields before submitting!");
+			alert("Please fill out all form fields");
 		}
     	
     	return false;
