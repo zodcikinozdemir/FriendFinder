@@ -13,10 +13,8 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 require('./app/routing/api-routes.js')(app);
 require('./app/routing/html-routes.js')(app);
 
-var argv = require('minimist')(process.argv.slice(2));
-var port = argv.port || 3000; //--port <port#> or default is 3000
-app.set('port', port);
+app.set('port', (process.env.PORT || 5000));
 
-var server = app.listen(port, function () {
+var server = app.listen(app.get('port'), function () {
     console.log("Listening on port %s...", server.address().port);
 });
