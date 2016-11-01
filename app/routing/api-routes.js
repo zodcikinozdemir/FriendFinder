@@ -4,11 +4,11 @@ var friends = require('../data/friends.js');
 module.exports = function(app) {
 
   app.route('/api/friends')
-	.get('/api/friends', function(req, res){
+	.get( function(req, res){
 		res.json(friends);
 	})
 
-	.post('/api/friends', function(req, res){
+	.post( function(req, res){
 		var bestMatch = {
 			name: "",
 			photo: "",
