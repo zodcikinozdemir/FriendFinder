@@ -9,30 +9,30 @@ module.exports = function(app) {
 	})
 
 	.post( function(req, res) {
-		var bestMatch = {
-			name: "",
-			photo: "",
-			difference: 99
+		var bestFriend = {
+			name : "",
+			photo : "",
+			diff : 99
 		};
 		var userData = req.body;
 		var userName = userData.name;
 		var userPhoto = userData.photo;
 		var userScores = userData.scores;
-		var totalDifference = 0;
+		var totalDiff = 0;
 
 		for (var i = 0; i < friends.length; i++){
-			totalDifference = 0;
+			totalDiff = 0;
 			for ( var j =0; j < 10; j++) {
-				totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
-					if (totalDifference <= bestMatch.difference){
-						bestMatch.name = friends[i].name;
-						bestMatch.photo = friends[i].photo;
-						bestMatch.difference = totalDifference;
+				totalDiff += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+					if (totalDiff <= bestFriend.diff){
+						bestFriend.name = friends[i].name;
+						bestFriend.photo = friends[i].photo;
+						bestFriend.diff = totalDiff;
 					}
 			}
 		}	
 
 		friends.push(userData);
-		res.json(bestMatch);
+		res.json(bestFriend);
 	});
 };
